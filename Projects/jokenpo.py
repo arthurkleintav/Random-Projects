@@ -1,5 +1,5 @@
 from time import sleep
-import random
+from random import randint
 
 def write(msg):
     size = len(msg) + 4
@@ -28,3 +28,4 @@ while True:
         print('\033[31mERRO! Opção inválida.\033[m')
     except:
         print('\033[31mERRO! Opção inválida.\033[m')
+
