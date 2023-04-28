@@ -19,6 +19,7 @@ def menu():
 sleep(0.5)
 
 menu()
+lista = ['pedra', 'papel', 'tesoura']
 
 while True:
     try:
@@ -39,7 +40,10 @@ if player_choice == 1:
     elif pc_choice == 3:
         winner = 'player'
 
-print(f'O jogador escolheu {player_choice} e o computador escolheu {pc_choice}')
+player_choice = lista[player_choice - 1]
+pc_choice = lista[pc_choice - 1]
+
+print(f'O jogador escolheu {player_choice} e o computador escolheu {pc_choice}.')
 if winner == 'player':
     print('\033[32mPARABÉNS! O jogador venceu.\033[m')
 elif winner == '':
