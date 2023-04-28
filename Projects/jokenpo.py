@@ -1,14 +1,15 @@
+from time import sleep
+from random import randint
+
+def write(msg):
+    size = len(msg) + 4
+    print('~' * len(msg))
+    print(f' {msg} ')
+    print('~' * len(msg))
+
+write('Eu irei jogar Jokenpô com você!')
+
 while True:
-    from time import sleep
-    from random import randint
-
-    def write(msg):
-        size = len(msg) + 4
-        print('~' * len(msg))
-        print(f' {msg} ')
-        print('~' * len(msg))
-
-    write('Eu irei jogar Jokenpô com você!')
 
     def menu():
         print('\033[36m--- MENU ---')
@@ -85,6 +86,7 @@ while True:
             break
         print('\033[31mERRO! Resposta inválida.\033[m')
     if ask == 'N':
+        sleep(0.25)
         write('FINALIZANDO O PROGRAMA... VOLTE SEMPRE!')
         sleep(0.25)
         break
