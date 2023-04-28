@@ -39,6 +39,13 @@ if player_choice == 1:
         winner = 'pc'
     elif pc_choice == 3:
         winner = 'player'
+elif player_choice == 2:
+    if pc_choice == 1:
+        winner = 'player'
+    elif pc_choice == 2:
+        winner = ''
+    elif pc_choice == 3:
+        winner = 'pc'
 
 player_choice = lista[player_choice - 1]
 pc_choice = lista[pc_choice - 1]
