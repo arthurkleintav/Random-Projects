@@ -21,7 +21,10 @@ sleep(0.5)
 menu()
 
 while True:
-    choice = int(input('Sua escolha: '))
-    if choice >=1 and choice <= 3:
-        break
-    print('\033[31mERRO! Opção inválida.\033[m')
+    try:
+        choice = int(input('Sua escolha: '))
+        if choice >=1 and choice <= 3:
+            break
+        print('\033[31mERRO! Opção inválida.\033[m')
+    except:
+        print('\033[31mERRO! Opção inválida.\033[m')
