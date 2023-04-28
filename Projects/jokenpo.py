@@ -8,5 +8,3 @@ def write(msg):
     print('~' * len(msg))
 
 write('Eu irei jogar Jokenpô com você!')
-sleep(1)
-lista = ['pedra', 'papel', 'tesoura']
