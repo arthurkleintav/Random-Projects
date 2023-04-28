@@ -22,10 +22,27 @@ menu()
 
 while True:
     try:
-        choice = int(input('Sua escolha: '))
-        if choice >=1 and choice <= 3:
+        player_choice = int(input('Sua escolha: '))
+        if player_choice >=1 and player_choice <= 3:
             break
         print('\033[31mERRO! Opção inválida.\033[m')
     except:
         print('\033[31mERRO! Opção inválida.\033[m')
 
+pc_choice = randint(1, 3)
+
+if player_choice == 1:
+    if pc_choice == 1:
+        winner = ''
+    elif pc_choice == 2:
+        winner = 'pc'
+    elif pc_choice == 3:
+        winner = 'player'
+
+print(f'O jogador escolheu {player_choice} e o computador escolheu {pc_choice}')
+if winner == 'player':
+    print('\033[32mPARABÉNS! O jogador venceu.\033[m')
+elif winner == '':
+    print('\033[36mEMPATE! Ninguém venceu o jogo.\033[m')
+else:
+    print('\033[31mOh não! O jogador perdeu.\033[m')
