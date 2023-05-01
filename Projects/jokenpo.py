@@ -104,8 +104,7 @@ while True:
     placar()
 
     while True:
-        ask = str(input('Deseja jogar novamente? [S/N]: ')).upper().strip()[0]
-
+        ask = input('Deseja jogar novamente? [S/N]: ').upper().strip()
         if ask in 'SN':
             break
         print('\033[31mERRO! Resposta inválida.\033[m')
