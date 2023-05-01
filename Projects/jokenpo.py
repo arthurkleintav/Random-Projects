@@ -33,14 +33,13 @@ pc_points = 0
 write('Eu irei jogar Jokenpô com você!')
 
 while True:
-
     sleep(1)
 
     menu()
+
     lista = ['pedra', 'papel', 'tesoura']
 
     sleep(0.5)
-
     while True:
         try:
             player_choice = int(input('Sua escolha: '))
@@ -106,9 +105,14 @@ while True:
 
     while True:
         ask = str(input('Deseja jogar novamente? [S/N]: ')).upper().strip()[0]
+
         if ask in 'SN':
             break
         print('\033[31mERRO! Resposta inválida.\033[m')
+    
+    if ask == 'S':
+        sleep(0.5)
+        print('-=' * 12)
 
     if ask == 'N':
         sleep(0.25)
