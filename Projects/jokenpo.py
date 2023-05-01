@@ -7,16 +7,32 @@ def write(msg):
     print(f' {msg} ')
     print('~' * len(msg))
 
-write('Eu irei jogar Jokenpô com você!')
+def placar():
+    print('-=' * 12)
+    if player_points > pc_points:
+        print(f'\033[32m{f"[ PLAYER: {player_points} ]":>15}')
+        print(f'{f"[ COMPUTADOR: {pc_points} ]":>15}\033[m')
+    elif pc_points > player_points:
+        print(f'\033[31m{f"[ PLAYER: {player_points} ]":>15}')
+        print(f'{f"[ COMPUTADOR: {pc_points} ]":>15}\033[m')
+    else:
+        print(f'\033[36m{f"[ PLAYER: {player_points} ]":>15}')
+        print(f'{f"[ COMPUTADOR: {pc_points} ]":>15}\033[m')
+    print('-=' * 12)
 
-while True:
-
-    def menu():
+def menu():
         print('\033[36m--- MENU ---')
         print('1 - Pedra')
         print('2 - Papel')
         print('3 - Tesoura')
         print('------ ------\033[m')
+
+player_points = 0
+pc_points = 0
+
+write('Eu irei jogar Jokenpô com você!')
+
+while True:
 
     sleep(1)
 
@@ -68,23 +84,32 @@ while True:
     sleep(0.5)
     print('KEN')
     sleep(0.5)
-    print('PO!\033[m')
+    print('PÔ!\033[m')
     sleep(0.5)
 
     print(f'O jogador escolheu {player_choice} e o computador escolheu {pc_choice}.')
+
     sleep(0.5)
+
     if winner == 'player':
         print('\033[32mPARABÉNS! O jogador venceu.\033[m')
+        player_points += 1
     elif winner == '':
         print('\033[36mEMPATE! Ninguém venceu o jogo.\033[m')
     else:
         print('\033[31mOh não! O jogador perdeu.\033[m')
+        pc_points += 1
     
+    sleep(0.5)
+
+    placar()
+
     while True:
         ask = str(input('Deseja jogar novamente? [S/N]: ')).upper().strip()[0]
         if ask in 'SN':
             break
         print('\033[31mERRO! Resposta inválida.\033[m')
+
     if ask == 'N':
         sleep(0.25)
         write('FINALIZANDO O PROGRAMA... VOLTE SEMPRE!')
