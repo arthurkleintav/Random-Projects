@@ -33,13 +33,14 @@ pc_points = 0
 write('Eu irei jogar Jokenpô com você!')
 
 while True:
-    sleep(1)
 
+    sleep(1)
     menu()
 
     lista = ['pedra', 'papel', 'tesoura']
 
     sleep(0.5)
+
     while True:
         try:
             player_choice = int(input('Sua escolha: '))
@@ -118,3 +119,6 @@ while True:
         write('FINALIZANDO O PROGRAMA... VOLTE SEMPRE!')
         sleep(0.25)
         break
+
+
+print()
