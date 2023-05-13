@@ -2,10 +2,10 @@ from time import sleep
 from random import randint
 
 def write(msg):
-    size = len(msg) + 4
-    print('~' * len(msg))
+    size = len(msg) + 2
+    print('~' * size)
     print(f' {msg} ')
-    print('~' * len(msg))
+    print('~' * size)
 
 def placar():
     print('-=' * 12)
