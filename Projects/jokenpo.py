@@ -119,6 +119,3 @@ while True:
         write('FINALIZANDO O PROGRAMA... VOLTE SEMPRE!')
         sleep(0.25)
         break
-
-
-print()
